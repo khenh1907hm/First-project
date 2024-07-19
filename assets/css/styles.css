@@ -148,6 +148,9 @@ a {
 }
 
 .hero-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     right: calc((100vw - 1100px)/ 2 - 100px);
     bottom: 0;
@@ -453,9 +456,9 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #3c76ccd4;
     width: 239px;
-    border-radius: 0 0 12px 12px;
+    border-radius: 12px;
     padding: 45px 22px 40px;
 }
 
@@ -473,7 +476,7 @@ a {
 
 .stats-trend .desc {
     margin-top: 8px;
-    color: #A7A7A7;
+    color: #000339;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 18px;
