@@ -6,6 +6,11 @@
     --primary-color: #0F1B4C;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -53,7 +58,7 @@ a {
 
 .header {
     background-color: #E6F0FF;
-    height: 100vh;
+    height: calc(100vh - 90px);
     position: relative;
     display: flex;
 }
