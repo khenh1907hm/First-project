@@ -55,12 +55,23 @@ a {
     background-color: #E6F0FF;
     height: 100vh;
     position: relative;
+    display: flex;
+}
+
+.fixed-header {
+    background-color: #E6F0FF;
+    padding-top: 26px;
+    top: -26px;
+    position: sticky;
+    z-index: 1111;
 }
 
 .navbar {
+    /* position: sticky; */
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
 
 }
 
