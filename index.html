@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"
     />
     <!-- favicon -->
@@ -28,22 +29,32 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
   </head>
   <body>
 
-      <!-- Header -->
+      <!--PC Header -->
        <header class="fixed-header">
         <div class="contain">
           <nav class="navbar">
+            <!-- Tablet and moblie Navbar -->
+             <label for="menu-checkbox" class="toggle-menu">
+              <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+             </label>
             <!-- Logo -->
-            <a href="#home"><img src="./assets/img/Logo.svg" alt="" /></a>
+            <a href="#home"><img src="./assets/img/Logo.svg" alt="" class="logo" /></a>
             <!-- Nav Links -->
-            <ul>
+            <ul id="pc-nav">
               <li><a href="#home">Home</a></li>
               <li><a href="#Service">Service</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#Resource">Resource</a></li>
               <li><a href="#Contact">Contact</a></li>
+              <li class= "show-mobile separate"><a href="#Contact">Sign in</a></li>
+              <li class= "show-mobile"><a href="#Contact">Sign up</a></li>
             </ul>
             <!-- Acticve -->
             <div class="action">
@@ -53,6 +64,26 @@
           </nav>
         </div>
        </header>
+      <!--Tablet and moblile Header -->
+      <header class="mobile-header">
+        <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+       <label for="menu-checkbox" class="menu-overlay"></label>
+        <div class="menu-drawer">
+          <a href="#home"><img src="./assets/img/Logo.svg" alt=""/></a>
+            <!-- Nav Links -->
+            <ul id="mobile-nav">
+              
+            </ul>
+            <script>
+              const pcNav= document.querySelector("#pc-nav")
+              const mobileNav= document.querySelector("#mobile-nav")
+
+              // copy dữ liệu từ nav từ pc
+              mobileNav.innerHTML= pcNav.innerHTML;
+
+            </script>
+        </div>
+      </header>
        <main id="home">
       <header class="header">
         <div class="contain">
@@ -88,7 +119,7 @@
 
           <div class="row row-desc">
             <p class="desc">More than 45,000+ companies trust besnik</p>
-            <p class="desc">5 Star Ratings (2k+ Review)</p>
+            <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
           </div> 
 
           <div class="images">
@@ -227,6 +258,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="view-all show-mobile">
+          <a href="" class="btn">View All Properties</a>
         </div>
         </div>
       </div>
